@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url(..//img/yer.jpg);
+    background-size: cover;
+}
+
+.sidebar{
+    position: relative;
+    width: 500px;
+    height: 100vh;
+    background: #1b39be44;
+    transition: all 1s;
+    margin-left: 0px;
+    transform: translateX(-100%);
+    margin-top: -8px;
+}
+
+.sidebar ul{
+    width: 430px;
+    height: 80vh;
+}
+
+.sidebar ul li{
+    color: #1B3ABE;
+    list-style-type: none;
+    font-size: 30px;
+    width: 400px;
+    height: 50px;
+    margin-top: 45px;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 5px;
+    border: 1px solid #1B3ABE ;
+}
+
+.btn-active{
+    transform: translate(0);
+}
+
+
+
+#navMenu{
+    margin-left: 101%;
+    top: 15px;
+    position: relative;
+    width: 30px;
+    height: 25px;
+}
+
+
+#navMenu > span
+{
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color:#1B3ABE  ;
+    margin: 0px auto;
+    
+
+}
+
+#navMenu > span:not(:last-child){
+    margin-bottom: 7px;
+}
+
+#navMenu, #navMenu > span
+{
+    transition: all .4s ease-in-out ;
+}
+
+#navMenu.active
+{
+    transition-delay: 0.8s;
+    transform:rotate(45deg)
+    ;
+}
+#navMenu.active > span:nth-child(1),
+#navMenu.active > span:nth-child(3){
+    transition-delay: .4s;
+}
+
+#navMenu.active > span:nth-child(1){
+    transform: translateY(9px);
+}
+
+#navMenu.active > span:nth-child(3){
+    transform: translateY(-9px) rotate(90deg);
+}
